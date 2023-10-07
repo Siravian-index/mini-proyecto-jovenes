@@ -1,0 +1,11 @@
+
+
+.about-paragraph {
+  font-size: var(--font-size-paragraph);
+}
+
+.paragraph-container {
+  padding: 1.4rem;
+}
+
+
