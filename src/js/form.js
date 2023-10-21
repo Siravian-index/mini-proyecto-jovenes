@@ -10,9 +10,23 @@ function saveUserData(event) {
   const email = formData.get("email")
   const phone = formData.get("phone")
 
-  const userData = { name, email, phone }
-  localStorage.setItem(email, JSON.stringify(userData))
+  if (name && email && phone) {
+    const userData = { name, email, phone }
+    console.log(userData)
+    const str = JSON.stringify(userData)
+    console.log(str)
+    localStorage.setItem(email, str)
+
+    redirectTo("./login.html")
+  }
 }
+
+function redirectTo(path) {
+  const a = document.createElement("a")
+  a.href = path
+  a.click()
+}
+
 
 
 form.addEventListener("submit", saveUserData)
