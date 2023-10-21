@@ -11,7 +11,7 @@ function saveUserData(event) {
   const phone = formData.get("phone")
 
   if (name && email && phone) {
-    const userData = { name, email, phone }
+    const userData = { name, email, phone, login: false }
     console.log(userData)
     const str = JSON.stringify(userData)
     console.log(str)
